@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Kumbh Sans;
+  src: url(../Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  font-family: Kumbh Sans, "sans serif";
+  font-size: 12px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq {
+  position: relative;
+  background-color: white;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  min-width: 60%;
+  border-radius: 1.5em;
+  margin-inline: 1.5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.faq .mobile {
+  position: absolute;
+  top: -6.7rem;
+  left: 14%;
+  min-width: 70%;
+}
+.faq-wrapper {
+  padding: 1.5em;
+}
+.faq__title {
+  margin-top: 4em;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.faq__accordion_item {
+  border-bottom: 0.1em hsl(240, 5%, 91%) solid;
+}
+.faq__accordion_item.active .faq__question {
+  color: hsl(238, 29%, 16%);
+}
+.faq__accordion_item.active .faq__question h3 {
+  font-weight: bold;
+}
+.faq__accordion_item.active .faq__answer {
+  max-height: 300px;
+}
+.faq__accordion_item.active svg {
+  transform: rotate(180deg);
+}
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq__question h3 {
+  font-weight: normal;
+}
+.faq__question h3:hover {
+  color: hsl(14, 88%, 65%);
+}
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.2s ease-in-out;
+}
+.faq__answer p {
+  font-weight: 300;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    position: absolute;
+    top: 2em;
+    left: -6em;
+    min-width: 70%;
+  }
+  .faq {
+    overflow: hidden;
+    background-position: -15% 80%;
+    background-size: 40% 20%;
+    max-width: 60%;
+  }
+  .faq-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .faq__right {
+    margin: 2em;
+    padding: 2.5em;
+  }
+  .faq__title {
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 1em;
+  }
+}/*# sourceMappingURL=style.css.map */
